@@ -10,6 +10,7 @@
    <implementation class="com.wordpress.chombium.eldemo.raspberrypi.RaspberryPiSensorService"/>
    <property name="service.pid" type="String" value="com.wordpress.chombium.eldemo.raspberrypi.RaspberryPiSensorService"/>
    <service>
-      <provide interface="com.wordpress.chombium.eldemo.raspberrypi.RaspberryPiSensorService"/>
+      <provide interface="com.wordpress.chombium.eldemo.sensors.SensorService"/>
    </service>
+   <reference bind="addSensorChangedListener" cardinality="0..n" interface="com.wordpress.chombium.eldemo.sensors.SensorChangedListener" name="SensorChangedListener" policy="dynamic" unbind="removeSensorChangedListener"/>
 </scr:component>
