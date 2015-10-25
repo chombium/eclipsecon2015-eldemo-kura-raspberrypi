@@ -4,6 +4,8 @@
          name="ElDemoRaspberryPiSensorService" 
          description="RaspberryPiSensorService configuration. ">
 	
+	<Icon resource="OSGI-INF/raspberry-sensors.png" size="32"/>
+	
 	    <AD id="voltage.read.rate"  
 	        name="voltage.read.rate"
 	        type="Integer"
