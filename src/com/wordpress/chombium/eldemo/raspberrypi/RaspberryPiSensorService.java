@@ -90,6 +90,7 @@ public class RaspberryPiSensorService implements ConfigurableComponent, SensorSe
 	@Override
 	public Object getSensorValue(String sensorName)
 			throws NoSuchSensorOrActuatorException {
+		s_logger.info(APP_ID + "getSensorValue: {}", sensorName);
 		if ("temperature".equals(sensorName)) {
 			try {
 				return readVoltage();
@@ -113,6 +114,8 @@ public class RaspberryPiSensorService implements ConfigurableComponent, SensorSe
 	@Override
 	public void setActuatorValue(String actuatorName, Object value)
 			throws NoSuchSensorOrActuatorException {
+		s_logger.info(APP_ID + "Set Actuator Value for: {} - {}", actuatorName, (String)value);
+
 		if ("circuitBreaker".equals(actuatorName)) {
 			_circuitBreakerSwitch.setState("on".equals(value));
 			notifyListeners("circuitBreaker", value);
@@ -122,15 +125,18 @@ public class RaspberryPiSensorService implements ConfigurableComponent, SensorSe
 
 	private void notifyListeners(String sensorName, Object newValue) {
 		for (SensorChangedListener listener : _listeners) {
+			s_logger.info(APP_ID + "Notify listeners: {}", listener.getClass().getName());
 			listener.sensorChanged(sensorName, newValue);
 		}
 	}
 	
 	public void addSensorChangedListener(SensorChangedListener listener) {
+		s_logger.info(APP_ID + "add Changed listeners: {}", listener.getClass().getName());
 		_listeners.add(listener);
 	}
 
 	public void removeSensorChangedListener(SensorChangedListener listener) {
+		s_logger.info(APP_ID + "remove Changed listeners: {}", listener.getClass().getName());
 		_listeners.remove(listener);
 	}
 }
