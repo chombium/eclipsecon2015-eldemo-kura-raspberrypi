@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetaData xmlns="http://www.osgi.org/xmlns/metatype/v1.2.0" localization="en_us">
+    <OCD id="com.wordpress.chombium.eldemo.raspberrypi.RaspberryPiSensorService"
+         name="ElDemoRaspberryPiSensorService" 
+         description="RaspberryPiSensorService configuration. ">
+	
+	    <AD id="voltage.read.rate"  
+	        name="voltage.read.rate"
+	        type="Integer"
+	        cardinality="0" 
+	        required="true"
+	        default="10"
+	        min="1" 
+	        description="Interval for reading the voltage in seconds (min 1)."/>
+	    
+    </OCD>
+    
+    <Designate pid="com.wordpress.chombium.eldemo.raspberrypi.RaspberryPiSensorService">
+        <Object ocdref="com.wordpress.chombium.eldemo.raspberrypi.RaspberryPiSensorService"/>
+    </Designate>
+</MetaData>
+

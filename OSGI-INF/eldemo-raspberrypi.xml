@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" 
+	name="com.wordpress.chombium.eldemo.raspberrypi.RaspberryPiSensorService"
+	activate="activate" 
+	deactivate="deactivate"
+	modified="updated"
+	enabled="true"
+	immediate="true"
+	configuration-policy="require">
+   <implementation class="com.wordpress.chombium.eldemo.raspberrypi.RaspberryPiSensorService"/>
+   <property name="service.pid" type="String" value="com.wordpress.chombium.eldemo.raspberrypi.RaspberryPiSensorService"/>
+   <service>
+      <provide interface="com.wordpress.chombium.eldemo.raspberrypi.RaspberryPiSensorService"/>
+   </service>
+</scr:component>
