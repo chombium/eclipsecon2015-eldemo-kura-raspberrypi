@@ -1,0 +1,20 @@
+#Deployment Plugin Project File
+#Wed Nov 04 00:41:33 CET 2015
+build.ant.name=<.>/resources/dp/eclipsecon201_eldemo_raspberrypi_build.xml
+build.dp.file=<.>/resources/dp/eclipsecon201_eldemo_raspberrypi.dp
+build.location=
+bundles.0.bundle_path=/opt/development/projects/eclipse/iot/kura-apps/eclipsecon2015-eldemo/export/plugins/com.wordpress.chombium.eldemo.raspberrypi_0.0.1.snapshot.jar
+bundles.0.customizer=false
+bundles.0.headers.count=0
+bundles.0.missing=false
+bundles.0.name=bundles/com.wordpress.chombium.eldemo.raspberrypi_0.0.1.snapshot.jar
+bundles.0.symbolic_name=com.wordpress.chombium.eldemo.raspberrypi;singleton\:\=true
+bundles.0.version=0.0.1.snapshot
+bundles.count=1
+certificates.count=0
+general.signbundles=false
+headers.other.headers=
+headers.symbolic.name=eclipsecon201_eldemo_raspberrypi
+headers.version=1.0.0
+resources.count=0
+
